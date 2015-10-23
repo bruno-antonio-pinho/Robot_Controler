@@ -105,7 +105,7 @@ def cam_direction(direction):
 while True:
 
 	data, addr = sock.recvfrom(1024) # Espera o pacote com os comados.
-        info = simplejson.loads(data) # Transforma a informação do pacote em um vetor de inteir.
-	print(info)
+        info = simplejson.loads(data) # Transforma a informacao do pacote em um vetor de inteir.
+	print(info) # printa na tela o pacote recebido para Debug.
 	robot_direction(info[0], info[2])
 	cam_direction(info[1])
